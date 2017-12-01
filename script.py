@@ -101,6 +101,9 @@ def main():
         cursor.execute("create database IF NOT EXISTS challenge;")
 
         # Creamos la tabla si es que no existe
+        # Como en muchas partes, esto se podría complejizar, verificar si el registro ya existe al agregarlo y que sea incremental el resguardo de los correos.
+        # En este caso me apegue al requerimiento manteniendo la simpleza, cada vez que se ejecuta, elimina la tabla en caso de que exista y la crea nuevamente
+        # Eliminando así los correos que ya habían quedado registrados.
         cursor.execute("SET sql_notes = 0; ")
         cursor.execute("drop table IF EXISTS  challenge.correos")
         cursor.execute("create table challenge.correos (id int NOT NULL AUTO_INCREMENT,remitente VARCHAR(70),subject varchar(70), fecha varchar(70),PRIMARY KEY(id));")
@@ -133,7 +136,7 @@ def main():
                 t = (rem,sub,dat)
                 cursor.execute(sql,t)
 
-                # Comitiamos los cambios
+                # Comiteamos los cambios
                 db.commit()
                 cursor.close()
 
