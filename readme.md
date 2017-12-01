@@ -4,7 +4,7 @@ Sistema capaz de buscar en una cuenta de Gmail los correos que contengan la pala
 
 ## Por que Python
 Por que elegi este lenguaje?
-Este ejercicio esta pensado como un desafío. Siguiendo este pensamiento, elegí python por que es el lenguaje que ustedes utilizan habitualmente.
+Este ejercicio esta pensado como un desafío. Siguiendo este pensamiento, elegí python por que es el lenguaje que ustedes utilizan habitualmente. Si bien este no es un lenguaje que domine, siempre es bueno utilizar las oportunidades como esta para aprender alguno nuevo.
 
 ## Requerimientos
 Cumple con el requerimiento funcional, intentado mantener el script lo mas simple posible.
